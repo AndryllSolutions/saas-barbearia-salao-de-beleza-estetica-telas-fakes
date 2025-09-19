@@ -28,7 +28,7 @@ def profissionais():
 @app.route("/servicos")
 def servicos():
     return render_template("servicos.html")
-
+#########################comentario
 @app.route("/relatorios")
 def relatorios():
     return render_template("relatorios.html")
