@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Relatórios{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">📅 Agenda</h5>
+        <p class="card-text">Relatórios de agendamentos por período.</p>
+        <button class="btn btn-primary btn-sm">Gerar</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">💰 Financeiro</h5>
+        <p class="card-text">Fluxo de caixa, entradas e saídas.</p>
+        <button class="btn btn-primary btn-sm">Gerar</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">👥 Clientes</h5>
+        <p class="card-text">Atendimentos e consumo de serviços.</p>
+        <button class="btn btn-primary btn-sm">Gerar</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

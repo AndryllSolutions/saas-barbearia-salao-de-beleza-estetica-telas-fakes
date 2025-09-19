@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<!-- LINHA DE CARDS -->
+<div class="row mb-4">
+  <div class="col-md-3">
+    <div class="card text-bg-primary shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">👥 Clientes</h5>
+        <h2>120</h2>
+        <p class="mb-0">Última atualização hoje</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-bg-success shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">📋 Comandas</h5>
+        <h2>350</h2>
+        <p class="mb-0">No último mês</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-bg-warning shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">💰 Faturamento</h5>
+        <h2>R$ 12.500</h2>
+        <p class="mb-0">No último mês</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-bg-info shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">💼 Profissionais</h5>
+        <h2>8</h2>
+        <p class="mb-0">Ativos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LINHA DE TABELAS -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-light">
+        Últimas Comandas
+      </div>
+      <div class="card-body">
+        <table class="table table-striped align-middle">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Cliente</th>
+              <th>Valor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1021</td>
+              <td>Maria</td>
+              <td>R$ 80,00</td>
+              <td><span class="badge bg-success">Pago</span></td>
+            </tr>
+            <tr>
+              <td>#1020</td>
+              <td>João</td>
+              <td>R$ 45,00</td>
+              <td><span class="badge bg-warning">Pendente</span></td>
+            </tr>
+            <tr>
+              <td>#1019</td>
+              <td>Ana</td>
+              <td>R$ 60,00</td>
+              <td><span class="badge bg-danger">Cancelado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-light">
+        Últimos Clientes
+      </div>
+      <div class="card-body">
+        <table class="table table-striped align-middle">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Data Cadastro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lucas Silva</td>
+              <td>lucas@email.com</td>
+              <td>18/09/2025</td>
+            </tr>
+            <tr>
+              <td>Amanda Pellin</td>
+              <td>amanda@email.com</td>
+              <td>17/09/2025</td>
+            </tr>
+            <tr>
+              <td>Fernanda Souza</td>
+              <td>fernanda@email.com</td>
+              <td>16/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

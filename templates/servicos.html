@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Serviços{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between mb-3">
+  <input type="text" class="form-control w-25" placeholder="Buscar serviço...">
+</div>
+
+<table class="table table-striped table-hover align-middle">
+  <thead class="table-dark">
+    <tr>
+      <th>Nome do Serviço</th>
+      <th>Duração</th>
+      <th>Preço</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Corte de Cabelo</td>
+      <td>30 min</td>
+      <td>R$ 50,00</td>
+      <td>
+        <button class="btn btn-sm btn-warning">Editar</button>
+        <button class="btn btn-sm btn-danger">Excluir</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Manicure</td>
+      <td>45 min</td>
+      <td>R$ 40,00</td>
+      <td>
+        <button class="btn btn-sm btn-warning">Editar</button>
+        <button class="btn btn-sm btn-danger">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

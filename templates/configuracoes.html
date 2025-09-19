@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Configurações{% endblock %}
+
+{% block content %}
+<form class="w-50">
+  <div class="mb-3">
+    <label class="form-label">Nome da Empresa</label>
+    <input type="text" class="form-control" value="Meu SaaS">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email de Contato</label>
+    <input type="email" class="form-control" value="contato@meusaas.com">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Telefone</label>
+    <input type="text" class="form-control" value="(11) 99999-9999">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Moeda Padrão</label>
+    <select class="form-select">
+      <option selected>BRL - Real</option>
+      <option>USD - Dólar</option>
+      <option>EUR - Euro</option>
+    </select>
+  </div>
+
+  <button class="btn btn-success">Salvar Alterações</button>
+</form>
+{% endblock %}
