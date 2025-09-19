@@ -1,33 +1,55 @@
 {% extends "base.html" %}
-
-{% block title %}Configurações{% endblock %}
+{% block title %}Configurações - BellaSaaS{% endblock %}
 
 {% block content %}
-<form class="w-50">
-  <div class="mb-3">
-    <label class="form-label">Nome da Empresa</label>
-    <input type="text" class="form-control" value="Meu SaaS">
-  </div>
+<div class="container-fluid">
+  <h2 class="mb-4">⚙️ Configurações</h2>
 
-  <div class="mb-3">
-    <label class="form-label">Email de Contato</label>
-    <input type="email" class="form-control" value="contato@meusaas.com">
-  </div>
+  <!-- Abas principais -->
+  <ul class="nav nav-tabs mb-4" id="configTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="empresa-tab" data-bs-toggle="tab" data-bs-target="#empresa" type="button" role="tab">🏢 Empresa</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="fin-tab" data-bs-toggle="tab" data-bs-target="#fin" type="button" role="tab">💰 Financeiro</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="notif-tab" data-bs-toggle="tab" data-bs-target="#notif" type="button" role="tab">🔔 Notificações</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pers-tab" data-bs-toggle="tab" data-bs-target="#pers" type="button" role="tab">🎨 Personalizar</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab">🛠️ Administração</button>
+    </li>
+  </ul>
 
-  <div class="mb-3">
-    <label class="form-label">Telefone</label>
-    <input type="text" class="form-control" value="(11) 99999-9999">
-  </div>
+  <!-- Conteúdo das abas -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active p-4 border rounded" id="empresa" role="tabpanel">
+      <h5>Detalhes da Empresa</h5>
+      <p class="text-muted">Aqui você poderá configurar os dados básicos da sua empresa: nome, CNPJ, endereço, contatos e logo.</p>
+    </div>
 
-  <div class="mb-3">
-    <label class="form-label">Moeda Padrão</label>
-    <select class="form-select">
-      <option selected>BRL - Real</option>
-      <option>USD - Dólar</option>
-      <option>EUR - Euro</option>
-    </select>
-  </div>
+    <div class="tab-pane fade p-4 border rounded" id="fin" role="tabpanel">
+      <h5>Financeiro</h5>
+      <p class="text-muted">Configuração de formas de pagamento, integração com maquininhas e contas bancárias.</p>
+    </div>
 
-  <button class="btn btn-success">Salvar Alterações</button>
-</form>
+    <div class="tab-pane fade p-4 border rounded" id="notif" role="tabpanel">
+      <h5>Notificações</h5>
+      <p class="text-muted">Gerencie os avisos automáticos por WhatsApp, SMS e E-mail para clientes e profissionais.</p>
+    </div>
+
+    <div class="tab-pane fade p-4 border rounded" id="pers" role="tabpanel">
+      <h5>Personalizar</h5>
+      <p class="text-muted">Aqui você pode mudar cores do sistema, logo, textos e identidade visual.</p>
+    </div>
+
+    <div class="tab-pane fade p-4 border rounded" id="admin" role="tabpanel">
+      <h5>Administração</h5>
+      <p class="text-muted">Configurações de permissões, cargos, usuários e acessos.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}

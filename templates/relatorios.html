@@ -1,34 +1,86 @@
 {% extends "base.html" %}
-
-{% block title %}Relatórios{% endblock %}
+{% block title %}Relatórios - BellaSaaS{% endblock %}
 
 {% block content %}
-<div class="row mb-4">
-  <div class="col-md-4">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">📅 Agenda</h5>
-        <p class="card-text">Relatórios de agendamentos por período.</p>
-        <button class="btn btn-primary btn-sm">Gerar</button>
-      </div>
+<div class="container-fluid">
+  <h2 class="mb-4">📊 Relatórios</h2>
+
+  <!-- Abas de relatórios -->
+  <ul class="nav nav-tabs mb-4" id="relatoriosTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="fav-tab" data-bs-toggle="tab" data-bs-target="#fav" type="button" role="tab">⭐ Favoritos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="fin-tab" data-bs-toggle="tab" data-bs-target="#fin" type="button" role="tab">💰 Financeiro</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="age-tab" data-bs-toggle="tab" data-bs-target="#age" type="button" role="tab">📅 Agendamentos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="cli-tab" data-bs-toggle="tab" data-bs-target="#cli" type="button" role="tab">👤 Clientes</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="ven-tab" data-bs-toggle="tab" data-bs-target="#ven" type="button" role="tab">🛒 Vendas</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="est-tab" data-bs-toggle="tab" data-bs-target="#est" type="button" role="tab">📦 Estoque</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="notas-tab" data-bs-toggle="tab" data-bs-target="#notas" type="button" role="tab">🧾 Notas Fiscais</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="rank-tab" data-bs-toggle="tab" data-bs-target="#rank" type="button" role="tab">🏆 Ranking</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="msg-tab" data-bs-toggle="tab" data-bs-target="#msg" type="button" role="tab">💬 Mensagens</button>
+    </li>
+  </ul>
+
+  <!-- Conteúdo das abas -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active text-center p-5 border rounded" id="fav" role="tabpanel">
+      <h5>Nenhum relatório favorito adicionado</h5>
+      <p class="text-muted">Na listagem dos relatórios, clicando na ⭐ você pode favoritar seus relatórios preferidos.</p>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">💰 Financeiro</h5>
-        <p class="card-text">Fluxo de caixa, entradas e saídas.</p>
-        <button class="btn btn-primary btn-sm">Gerar</button>
-      </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="fin" role="tabpanel">
+      <h5>Financeiro</h5>
+      <p class="text-muted">Aqui você verá relatórios de faturamento, despesas e lucros.</p>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">👥 Clientes</h5>
-        <p class="card-text">Atendimentos e consumo de serviços.</p>
-        <button class="btn btn-primary btn-sm">Gerar</button>
-      </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="age" role="tabpanel">
+      <h5>Agendamentos</h5>
+      <p class="text-muted">Aqui ficarão os relatórios de ocupação e estatísticas de agendamento.</p>
+    </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="cli" role="tabpanel">
+      <h5>Clientes</h5>
+      <p class="text-muted">Relatórios sobre clientes ativos, novos e recorrentes.</p>
+    </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="ven" role="tabpanel">
+      <h5>Vendas</h5>
+      <p class="text-muted">Relatórios detalhados de vendas de produtos e serviços.</p>
+    </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="est" role="tabpanel">
+      <h5>Estoque</h5>
+      <p class="text-muted">Relatórios sobre entradas, saídas e produtos em falta.</p>
+    </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="notas" role="tabpanel">
+      <h5>Notas Fiscais</h5>
+      <p class="text-muted">Relatórios de notas emitidas e status de envio.</p>
+    </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="rank" role="tabpanel">
+      <h5>Ranking</h5>
+      <p class="text-muted">Ranking de profissionais, serviços mais vendidos, etc.</p>
+    </div>
+
+    <div class="tab-pane fade text-center p-5 border rounded" id="msg" role="tabpanel">
+      <h5>Mensagens</h5>
+      <p class="text-muted">Relatórios de disparos de mensagens automáticas e marketing.</p>
     </div>
   </div>
 </div>

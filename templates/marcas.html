@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3><i class="fas fa-tags"></i> Marcas</h3>
+    <table class="table table-striped mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Itens</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alfaparf</td>
+                <td>Nenhum item associado</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="#" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Wella</td>
+                <td>Possui 1 item associado</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="#" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

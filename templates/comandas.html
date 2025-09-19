@@ -1,43 +1,35 @@
 {% extends "base.html" %}
-
-{% block title %}Comandas{% endblock %}
+{% block title %}Comandas - BellaSaaS{% endblock %}
 
 {% block content %}
-<div class="d-flex justify-content-between mb-3">
-  <input type="text" class="form-control w-25" placeholder="Buscar comanda...">
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2>🧾 Comandas</h2>
+  <button class="btn btn-primary" onclick="alert('Mock!')">+ Nova Comanda</button>
 </div>
 
-<table class="table table-striped table-hover align-middle">
+<table class="table table-hover table-bordered">
   <thead class="table-dark">
     <tr>
-      <th>#Ticket</th>
-      <th>Data</th>
+      <th>ID</th>
       <th>Cliente</th>
       <th>Status</th>
       <th>Valor</th>
-      <th>Pagamento</th>
-      <th>Nota Fiscal</th>
       <th>Ações</th>
     </tr>
   </thead>
   <tbody>
+    {% for c in fake_comandas %}
     <tr>
-      <td>#3613</td>
-      <td>17/04/2024</td>
-      <td>Gisele</td>
-      <td><span class="badge bg-warning">Pendente</span></td>
-      <td>R$ 35,00</td>
-      <td><span class="badge bg-info">Em aberto</span></td>
-      <td>
-        <span class="badge bg-secondary">S</span>
-        <span class="badge bg-secondary">P</span>
-        <span class="badge bg-secondary">C</span>
-      </td>
+      <td>{{ c.id }}</td>
+      <td>{{ c.cliente }}</td>
+      <td>{{ c.status }}</td>
+      <td>{{ c.valor }}</td>
       <td>
         <button class="btn btn-sm btn-warning">Editar</button>
         <button class="btn btn-sm btn-danger">Excluir</button>
       </td>
     </tr>
+    {% endfor %}
   </tbody>
 </table>
 {% endblock %}

@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Painel - Meu SaaS</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        display: flex;
-        min-height: 100vh;
-      }
-      .sidebar {
-        width: 240px;
-        background: #222;
-        color: #fff;
-      }
-      .sidebar h4 {
-        padding: 20px;
-        font-size: 1.2rem;
-      }
-      .sidebar a {
-        color: #ddd;
-        display: block;
-        padding: 10px 20px;
-        text-decoration: none;
-      }
-      .sidebar a:hover {
-        background: #444;
-        color: #fff;
-      }
-      .content {
-        flex: 1;
-        padding: 20px;
-        background: #f8f9fa;
-      }
-      .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- MENU LATERAL -->
-    <div class="sidebar">
-      <h4>Meu SaaS</h4>
-      <a href="{{ url_for('painel') }}">Painel</a>
-      <a href="{{ url_for('clientes') }}">Clientes</a>
-      <a href="{{ url_for('comandas') }}">Comandas</a>
-      <a href="{{ url_for('profissionais') }}">Profissionais</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Painel - SaaS Barbearia{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      top: 0; left: 0;
+      background: #212529;
+      color: white;
+      padding-top: 1rem;
+    }
+    .sidebar a {
+      display: block;
+      color: #ddd;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background: #343a40;
+      color: #fff;
+    }
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+<div class="d-flex flex-column p-3 text-white bg-dark" style="width: 250px; height: 100vh; position: fixed;">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <span class="fs-4">💈 ANDRYLL<br>SOLUTIONS</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
 
-      <a href="{{ url_for('servicos') }}">Serviços</a>
-      <a href="{{ url_for('relatorios') }}">Relatórios</a>
-      <a href="{{ url_for('configuracoes') }}">Configurações</a>
-    </div>
+    <li><a href="{{ url_for('painel') }}" class="nav-link text-white">🏠 Painel</a></li>
+    <li><a href="{{ url_for('clientes') }}" class="nav-link text-white">👥 Clientes</a></li>
+    <li><a href="{{ url_for('comandas') }}" class="nav-link text-white">🧾 Comandas</a></li>
+    <li><a href="{{ url_for('profissionais') }}" class="nav-link text-white">💼 Profissionais</a></li>
+    <li><a href="{{ url_for('servicos') }}" class="nav-link text-white">✂️ Serviços</a></li>
+    <li><a href="{{ url_for('relatorios') }}" class="nav-link text-white">📊 Relatórios</a></li>
+    <li><a href="{{ url_for('configuracoes') }}" class="nav-link text-white">⚙️ Configurações</a></li>
 
-    <!-- CONTEÚDO -->
-    <div class="content">
-      <div class="topbar">
-        <h2>{% block title %}{% endblock %}</h2>
-        <button class="btn btn-primary">+ Novo</button>
-      </div>
-      {% block content %}{% endblock %}
-    </div>
-  </body>
+    <hr>
+    <!-- 🔥 Novos menus -->
+    <li><a href="{{ url_for('marcas') }}" class="nav-link text-white">🏷️ Marcas</a></li>
+    <li><a href="{{ url_for('pacotes') }}" class="nav-link text-white">📦 Pacotes</a></li>
+    <li><a href="{{ url_for('pacotes_predefinidos') }}" class="nav-link text-white">📋 Pacotes Predefinidos</a></li>
+    <li><a href="{{ url_for('ajuda') }}" class="nav-link text-white">❓ Ajuda</a></li>
+    <li><a href="{{ url_for('whatsapp_marketing') }}" class="nav-link text-white">💬 WhatsApp Marketing</a></li>
+  </ul>
+</div>
+  <!-- Conteúdo -->
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
