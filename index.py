@@ -1,15 +1,13 @@
 from flask import Flask, render_template
 
-# o template_folder agora aponta para "templates" dentro da pasta api
+# templates está dentro da pasta api
 app = Flask(__name__, template_folder="templates")
 
-# ==== MOCKS (dados fake só para prototipar) ====
+# MOCKS
 fake_clientes = [
     {"id": 1, "nome": "Amanda Pellin", "email": "amanda@email.com", "nascimento": "09/10/1995"},
     {"id": 2, "nome": "Anna Tavares", "email": "anna@email.com", "nascimento": "13/07/1994"},
 ]
-
-# ==== ROTAS ====
 
 @app.route("/")
 def painel():
@@ -39,11 +37,5 @@ def relatorios():
 def configuracoes():
     return render_template("configuracoes.html")
 
-# rota de teste rápido
-@app.route("/ping")
-def ping():
-    return "pong 🏓"
-
-# ==== MAIN ====
 if __name__ == "__main__":
     app.run(debug=True)
